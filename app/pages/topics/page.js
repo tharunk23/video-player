@@ -1,7 +1,7 @@
 "use client";
 import { useSearchParams } from 'next/navigation';
 import { vehicleTopics } from '@/app/data/VehicleTopics';
-import Header from '@/app/components/Header';
+import Header from '@/app/components/header';
 import Card2 from '@/app/components/card2';
 
 const TopicsPage = () => {

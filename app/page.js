@@ -1,6 +1,6 @@
 "use client"; // This line makes the component a Client Component
 
-import Header from "./components/Header"; // Ensure the casing matches the component file name
+import Header from './components/header'; // Ensure the casing matches the component file name
 import { useRouter } from 'next/navigation'; // Import useRouter for navigation
 
 export default function Home() {
