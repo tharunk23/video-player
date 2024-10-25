@@ -3,6 +3,7 @@ import { useSearchParams } from 'next/navigation';
 import { vehicleTopics } from '@/app/data/VehicleTopics';
 import Header from '@/app/components/header';
 import Card2 from '@/app/components/card2';
+import { Suspense } from 'react';
 
 const TopicsPage = () => {
   const searchParams = useSearchParams();
@@ -16,6 +17,7 @@ const TopicsPage = () => {
   const topics = vehicleTopics[vehicleId]?.[category] || [];
 
   return (
+    <Suspense fallback={<div>Loading...</div>}>
     <div className="min-h-screen bg-blacky7 text-white">
       <Header />
       <div className="container mx-auto p-4">
@@ -33,6 +35,7 @@ const TopicsPage = () => {
         </div>
       </div>
     </div>
+    </Suspense>
   );
 };
 
